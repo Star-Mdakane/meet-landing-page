@@ -19,14 +19,18 @@
 
 html {
     width: 100vw;
+    min-width: 23.4375rem;
     height: 100vh;
     background-color: var(--slate-dark);
+
 
 }
 
 body {
     font-family: "Red Hat Display", sans-serif;
     background-color: var(--slate-dark);
+    min-width: 23.4375rem;
+
 }
 
 .container {
@@ -77,7 +81,7 @@ nav {
 
 .hero-content {
     padding: 1.5rem;
-    width: 28rem;
+    min-width: 23.4375rem;
     margin: 0 auto;
 }
 
@@ -117,7 +121,7 @@ nav {
 .wrapper {
     display: flex;
     flex-direction: column;
-    width: min(70rem, 100%);
+    width: min(23.44rem, 100%);
     margin: 0 auto;
 }
 
@@ -235,7 +239,6 @@ footer {
 
 .footer-content {
     position: relative;
-    /* display: flex; */
     background-color: var(--cyan-dark);
     /* background-blend-mode: multiply; */
     background-image: url(/starter-code/assets/desktop/image-footer.jpg);
@@ -333,10 +336,11 @@ ul img {
         display: block;
     }
 
+
     .lower {
-        display: grid;
         grid-template-columns: 1fr;
-        gap: 0.5rem;
+        max-width: 28rem;
+        margin: 4.5rem auto 0;
     }
 
     .lower .side {
@@ -363,6 +367,47 @@ ul img {
     .footer-content .f-btn .btn {
         right: 50%;
         transform: translateX(50%);
+    }
+
+    .footer-content {
+        background-image: url(/starter-code/assets/tablet/image-footer.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+}
+
+@media screen and (max-width: 37.5rem) {
+    .buttons {
+        flex-direction: column;
+    }
+
+    .buttons {
+        align-items: center;
+    }
+
+    .lower {
+        margin: 3rem auto 0;
+    }
+
+
+    ul {
+        grid-template-columns: repeat(2, minmax(min(100%, 9.1875rem), 9.5rem));
+        justify-content: center;
+        gap: min(2rem, 5%);
+        margin: 4rem 0;
+    }
+
+    .content {
+        padding: 2rem 2rem 4rem 2rem;
+    }
+
+    .footer-content {
+        background-image: url(/starter-code/assets/mobile/image-footer.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
     }
 
 }
