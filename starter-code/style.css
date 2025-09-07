@@ -1,6 +1,6 @@
 :root {
     --cyan-dark: #4d96a9;
-    --cyan-mid: #8fe39f;
+    --cyan-mid: #71C0D4;
     --purple-dark: #855fb1;
     --purple-mid: #d9b8ff;
     --slate-dark: #28283d;
@@ -20,17 +20,23 @@
 html {
     width: 100vw;
     height: 100vh;
-    margin-inline: auto;
+    background-color: var(--slate-dark);
+
 }
 
 body {
     font-family: "Red Hat Display", sans-serif;
-    ;
-    background-color: var(--white);
-    color: var(--slate-dark);
+    background-color: var(--slate-dark);
+}
+
+.container {
+    justify-content: center;
     display: grid;
     grid-template-columns: minmax(375px, 1440px);
     text-align: center;
+    background-color: var(--white);
+    max-width: 90rem;
+    margin: 0 auto;
 }
 
 a {
@@ -43,6 +49,281 @@ ul {
     list-style: none;
 }
 
+p {
+    color: var(--slate-mid);
+    font-size: 1.125rem;
+    line-height: 1.1;
+    letter-spacing: 0.025rem;
+}
+
+
 .upper {
     display: none;
+}
+
+nav {
+    padding: 5rem 5rem 0 5rem;
+}
+
+.hero {
+    padding: 4rem 0;
+}
+
+.lower {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.hero-content {
+    padding: 1.5rem;
+}
+
+.hero .lower h1 {
+    font-size: clamp(2.5rem, 1.97rem + 2.25vw, 4rem);
+    text-transform: capitalize;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0px;
+}
+
+.hero .lower p {
+    margin-bottom: 2rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    display: flex;
+    flex-shrink: 0;
+    font-size: 1rem;
+    color: var(--white);
+    border-radius: 2rem;
+    padding: 1rem 2.5rem;
+    line-height: 1.5;
+    letter-spacing: 0.4px;
+}
+
+.content {
+    padding: 3.5rem 5rem 4.5rem 5rem;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: min(70rem, 100%);
+    margin: 0 auto;
+}
+
+.num {
+    position: relative;
+    height: 8.5rem;
+}
+
+.num .line {
+
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    color: var(--slate-mid);
+    border-left: 1px solid var(--slate-mid);
+    top: 0;
+    left: 50%;
+
+}
+
+/* .num::before {
+    content: "";
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    color: var(--slate-mid);
+    border-left: 1px solid var(--slate-mid);
+    top: 0;
+} */
+
+
+
+.num .one {
+    display: inline-block;
+    border: 1px solid var(--slate-mid);
+    padding: 0.5rem;
+    border-radius: 100%;
+    color: var(--slate-mid);
+    /* font-size: 1rem; */
+    letter-spacing: 0;
+    line-height: 1.5;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5rem;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(min(100%, 1rem), 16rem));
+    gap: min(2rem, 5%);
+    margin: min(4rem, 5%) 0;
+}
+
+.content-content {
+    max-width: 34rem;
+    margin: 0 auto;
+}
+
+.content-content h4 {
+    text-transform: uppercase;
+    color: var(--cyan-dark);
+    line-height: 1.1;
+    letter-spacing: 4px;
+}
+
+.content-content h2 {
+    font-size: clamp(2rem, 1.82rem + 0.75vw, 2.5rem);
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    letter-spacing: 0px;
+}
+
+.content-content p {}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+.num2 {
+    position: relative;
+    height: 6.25rem;
+    background-color: var(--white);
+}
+
+.two {
+    display: inline-block;
+    border: 1px solid var(--slate-mid);
+    padding: 0.5rem;
+    border-radius: 100%;
+    background-color: var(--white);
+    color: var(--slate-mid);
+    /* font-size: 1rem; */
+    letter-spacing: 0;
+    line-height: 1.5;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5rem;
+    z-index: 5;
+}
+
+.num2 .line {
+
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    color: var(--slate-mid);
+    border-left: 1px solid var(--slate-mid);
+    top: 0;
+    left: 50%;
+
+}
+
+.footer-content {
+    position: relative;
+    /* display: flex; */
+    background-color: var(--cyan-dark);
+    /* background-blend-mode: multiply; */
+    background-image: url(/starter-code/assets/desktop/image-footer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 7rem 5rem;
+}
+
+.footer-content::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background-color: var(--cyan-dark);
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+
+
+.footer-container {
+    display: flex;
+    grid-template-columns: 455px 355px 256px;
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 70rem;
+}
+
+.footer-container>* {
+    z-index: 3;
+}
+
+.footer-content h2 {
+    flex-basis: 455px;
+    font-size: clamp(2rem, 1.82rem + 0.75vw, 2.5rem);
+    line-height: 1.1;
+    letter-spacing: 0px;
+    color: var(--white);
+}
+
+.footer-content p {
+    flex-basis: 355px;
+    color: var(--white);
+}
+
+.footer-content .f-btn {
+    flex-basis: 256px;
+    position: relative;
+}
+
+.footer-content .f-btn .btn {
+    position: absolute;
+    right: 0;
+}
+
+
+.hero img {
+    width: 100%;
+}
+
+ul img {
+    width: 100%;
+}
+
+
+.btn span {
+    font-weight: 300;
+}
+
+.btn.blue {
+    background-color: var(--cyan-dark);
+}
+
+.btn.blue:focus,
+.btn.blue:hover,
+.btn.blue:active {
+    background-color: var(--cyan-mid);
+}
+
+.btn.purple:focus,
+.btn.purple:hover,
+.btn.purple:active {
+    background-color: var(--purple-mid);
+}
+
+.btn.purple {
+    background-color: var(--purple-dark);
 }

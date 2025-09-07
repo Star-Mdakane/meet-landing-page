@@ -25,7 +25,7 @@ This is a solution to the [Meet landing page challenge on Frontend Mentor](https
 Users should be able to:
 
 - I will attempt to make it fit to all the given three view modes
-- See hover states for interactive elements
+- Hover only applies to the buttons
 
 ### Screenshot
 
@@ -45,23 +45,32 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
-
+  I spent close to 24 hours if not trying to learn Figma.
+  I had to do the planning on an external book while trying to learn Figma.
+  Did basic HTML and CSS to have a skeleton
+  Was reluctant to do mobile first because of the hero image on mobile and tablet is not desktop and deskotp has two hero images
+  Used display grid on my body and it moved the body content to the left, wondered why it was like that but eventually noticed and used justify ccontent to the center.
+  On nav I just added my logo.
+  On the hero section I used display hidden for the picture for tablet and mobile then had to use grid for the divs making the images width 100% so they would be responsive. I will work on the button later.
+  on the main I used flex for the 3 sections.
+  I used pseudo element for the line and used positioned it along with the number absolutely.
+  I then positioned the ul in the middle and used grid to position the li containing the images and applied width. I will have to work on the images for mobile view. DOne. used grid template column minmax instead of auto so that they remain on single line and gap of min. Will have to work on mq for mobile.
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+
+
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+
+I learnt Figma the hard way.
 
 To see how you can add code snippets, see below:
 
@@ -77,6 +86,7 @@ To see how you can add code snippets, see below:
 const proudOfThisFunc = () => {
   console.log('🎉')
 }
+Thinking of including js but Figma drained me, maybe I will come baxck at a later time.
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
